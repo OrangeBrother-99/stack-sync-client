@@ -1,0 +1,106 @@
+# macOS
+.DS_Store
+
+# Cocos
+/.cocos-project.json
+/cocos2d/cocos/platform/android/java/libs
+/cocos2d/cocos/platform/android/java/src
+/cocos2d/external/android
+/cocos2d/external/ios
+/cocos2d/external/mac
+/cocos2d/external/win32
+/cocos2d/external/linux64
+/cocos2d/external/linuxarmv7
+/cocos2d/external/win64
+/cocos2d/external/winrt
+/cocos2d/external/electron/
+/temp
+/local
+/.creator
+/library
+# Xcode
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj/xcuserdata/
+
+# Android Studio
+/.idea
+
+# Visual Studio
+/.vs
+
+# Compiled files
+/*.apk
+/*.ap_
+/*.aab
+/*.so
+/*.dll
+/*.exe
+/*.exe.manifest
+/*.o
+/*.pyc
+/*.pyo
+/*.pyd
+/*.class
+/*.jar
+/*.war
+/*.ear
+/*.swf
+/*.ipa
+/*.dSYM/
+/*.xcarchive/
+/*.xcuserdatad/
+/*.cpp
+/*.c
+/*.cc
+/*.h
+/*.hpp
+/*.mm
+/*.m
+/*.plist
+/*.lua.c
+/*.luac
+/*.tmx
+/*.tsx
+/*.json
+/*.xml
+/*.sqlite
+
+# Dependency directories
+/lib
+/bin
+/build
+/obj
+/node_modules
+
+# Editor directories
+/.vscode
+/.cocos
+
+# Logs and databases
+/*.log
+/*.sqlite3
+/*.log.*
+/*.db
+/*.sql
+/*.hprof
+
+# Generated files
+/GeneratedFiles/
+/DerivedData/
+
+# User-specific files
+/.idea/
+/.vs/
+/*.suo
+/*.user
+/*.sln.docstates
+
+# Build artifacts
+/Debug/
+/Release/
+/x64/
+/x86/
+/Win32/
+/ARM/
+/ARM64/
