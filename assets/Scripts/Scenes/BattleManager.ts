@@ -38,6 +38,7 @@ export class BattleManager extends Component {
         this.initMap();
         this.shouldRender = true;
         NetworkManager.Instance.listen(ApiMessageEnum.MSG_ServerSync, this.handleServerSync, this);
+        EventManager.Instance.on(EventEnum.HitAttack, this.hitAttackHandle, this);
 
     }
     clearGame() {
@@ -46,6 +47,7 @@ export class BattleManager extends Component {
         this.ndBg.removeAllChildren();
         EventManager.Instance.off(EventEnum.CilentSync, this.handleClientSync, this);
         NetworkManager.Instance.unlisten(ApiMessageEnum.MSG_ServerSync, this.handleServerSync, this);
+        EventManager.Instance.off(EventEnum.HitAttack, this.hitAttackHandle, this);
 
     }
     async connectServer() {
@@ -190,5 +192,11 @@ export class BattleManager extends Component {
                 bm.render(data);
             }
         }
+    }
+
+    
+    hitAttackHandle(){
+        
+        //伤害跳字
     }
 }

@@ -38,11 +38,13 @@ export class ActorManager extends EntityManager {
         this.wm.init(data)
         this.node.active = false;
         this.targerPos = undefined;
+
     }
 
     protected onLoad(): void {
 
     }
+
     tick(dt: number): void {
         if (this.id != DataManager.Instance.myPlayerId) {
             return;
@@ -76,6 +78,7 @@ export class ActorManager extends EntityManager {
 
     }
     renderHp(data: IAcotor) {
+      
         this.hp.progress = data.hp / this.hp.totalLength;
 
     }
@@ -115,4 +118,5 @@ export class ActorManager extends EntityManager {
         const angle = radian / Math.PI * 180;
         this.wm.node.angle = angle;
     }
+
 }

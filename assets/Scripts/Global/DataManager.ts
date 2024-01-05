@@ -141,6 +141,8 @@ export default class DataManager extends Singleton {
                             const random = seedRandom(this.state.seed);
                             const damage = random / 233280 >= 0.5 ? BULLET_DAMAGE * 2 : BULLET_DAMAGE;
                             actor.hp -= damage;
+                            console.info("我是玩家：", this.myPlayerId, "子弹：", bullet.id, "命中：", actor.id, "目标剩余血量：", actor.hp);
+                            EventManager.Instance.emit(EventEnum.HitAttack);
                             EventManager.Instance.emit(EventEnum.ExplosionBron, bullet.id,
                                 {
                                     x: (actor.position.x + bullet.position.x) / 2,

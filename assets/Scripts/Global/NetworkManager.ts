@@ -1,7 +1,7 @@
 import { log } from "cc";
 import Singleton from "../Base/Singleton";
 import { ApiMessageEnum, IModel, IServerResponse, strdecode, strencode } from "../Common";
-import { binaryEncode } from "../Common/Binary";
+// import { binaryEncode } from "../Common/Binary";
 interface IItem {
     cb: Function;
     ctx: unknown;
@@ -54,6 +54,7 @@ export default class NetworkManager extends Singleton {
                     const { name, data } = json;
                     if (this.map.has(name)) {
                         this.map.get(name).forEach(({ cb, ctx }) => {
+                            //console.info("监听消息",json);
                             cb.call(ctx, data);
                         });
                     }
@@ -104,7 +105,7 @@ export default class NetworkManager extends Singleton {
                     this.unlisten(name as any, cb, null);
                 }, 5000);
                 const cb = (response: any) => {
-                    //console.info("服务端返回",response);
+                  //  console.info("服务端返回",response);
                     if (!response.success) {
                         resolve({ success: false, error: new Error(response.error) });
                     } else {

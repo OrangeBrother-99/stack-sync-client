@@ -42,6 +42,7 @@ export enum EventEnum {
     ExplosionBron = "ExplosionBron",
     BulletShoot = "BulletShoot",
     CilentSync = "CilentSync",
+    HitAttack = "HitAttack",
 }
 
 
