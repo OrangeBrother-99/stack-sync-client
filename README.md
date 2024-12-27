@@ -1,5 +1,5 @@
 演示地址: https://www.bilibili.com/video/BV1294y1T7k1/ 
-# stack-sync-client
+# frame-sync-client
 帧同步-客户端（房间对战）
 # cocos-2d框架、版本：3.6.1
 ## 使用技术点：
